@@ -1,2 +1,36 @@
 # label_tool_app
-Streamlit製のラベル生成ツールです。CSVファイルをアップロードするだけで、商品名・商品コード・URLに基づいたバーコードとQRコードを自動生成し、Word形式で2列×N行のラベル一覧を出力します。認証機能付きで、購入者限定の安全な利用が可能。非エンジニアでも簡単に使える設計で、商品管理や販促資料の作成に最適です。Python・Pandas・Pillow・python-docx・qrcode・python-barcodeを活用した実用的なアプリケーションです。
+
+このアプリは、CSVファイルから商品ラベルを自動生成するStreamlitベースのツールです。商品名・商品コード・URLに基づいてバーコードとQRコードを作成し、Word形式で2列×N行のラベル一覧を出力します。認証機能付きで、購入者限定の安全な利用が可能です。
+
+## 🔧 主な機能
+
+- CSVファイルの読み込みとデータ表示
+- 商品コードからバーコード生成（Code128）
+- 商品URLからQRコード生成（任意）
+- Word形式でラベルを2列×N行で出力
+- 認証機能によるアクセス制限
+- ダウンロードボタンでWordファイル取得
+
+## 📦 使用技術
+
+- Python 3.x
+- Streamlit
+- Pandas
+- Pillow
+- python-docx
+- qrcode
+- python-barcode
+
+## 🚀 使い方
+
+1. `streamlit run app.py` で起動
+2. パスワードを入力（例：`fukuoka2025`）
+3. CSVファイルをアップロード
+4. Wordラベルを生成・ダウンロード
+
+## 📁 CSVフォーマット例
+
+```csv
+商品名,商品コード,商品URL
+Tシャツ001,TS001,https://example.com/item/ts001
+マグカップ002,MG002,https://example.com/item/mg002
